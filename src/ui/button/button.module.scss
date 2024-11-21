@@ -1,0 +1,42 @@
+.button {
+  display: flex;
+  gap: 8px;
+  height: 44px;
+  padding: 12.5px 26.5px 8.5px 26.5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 57px;
+  background: #003459;
+  cursor: pointer;
+  border: none;
+  border: 1.5px solid #003459;
+  color: #fdfdfd;
+
+  span {
+    color: inherit;
+    font-family: SVN-Gilroy, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    text-wrap: nowrap;
+  }
+}
+
+.white {
+  background: #fdfdfd;
+  border-color: #fdfdfd;
+  color: #003459;
+}
+
+.empty {
+  border: 1.5px solid #003459;
+  background: none;
+  color: #003459;
+}
+
+.white-border {
+  background: none;
+  border: 1.5px solid #fdfdfd;
+  color: #fdfdfd;
+}

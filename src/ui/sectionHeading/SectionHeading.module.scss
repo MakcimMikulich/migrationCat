@@ -1,0 +1,46 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-align: start;
+
+	margin-bottom: 28px;
+}
+
+.button {
+	display: flex;
+	padding: 12px 28px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 57px;
+	border: 1.5px solid var(--Primary-Color-Dark-Blue, #003459);
+
+	span {
+		margin-right: 8px;
+
+		color: var(--Primary-Color-Dark-Blue, #003459);
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 20px;
+	}
+
+	img {
+		margin-top: 3px;
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&:hover {
+		img {
+			transform: translateX(7px);
+		}
+	}
+}
+
+.note {
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 24px;
+}

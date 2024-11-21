@@ -1,0 +1,25 @@
+.app {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container {
+	max-width: 1220px;
+	padding: 0 20px;
+	width: 100%;
+	margin: 0 auto;
+
+	&.dog__container {
+		@media (max-width: 992px) {
+			padding: initial;
+		}
+	}
+}
+
+section {
+	width: 100%;
+	margin-bottom: 60px;
+}

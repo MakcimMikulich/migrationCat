@@ -1,0 +1,42 @@
+.cardInfoContainer {
+	display: flex;
+	margin-bottom: 4px;
+	flex-wrap: wrap;
+	overflow: hidden;
+
+	p {
+		white-space: nowrap;
+	}
+}
+
+.name {
+	color: #667479;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 150%;
+}
+
+.value {
+	color: #667479;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 150%;
+}
+
+.wrapper__info {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-right: 22px;
+}
+
+.dot {
+	position: absolute;
+	left: -13px;
+	display: block;
+	margin-top: 5px;
+	width: 4px;
+	height: 4px;
+	background: rgba(102, 116, 121, 1);
+	border-radius: 50%;
+}

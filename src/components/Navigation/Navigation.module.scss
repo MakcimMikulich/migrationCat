@@ -1,0 +1,145 @@
+.menu__body {
+	@media (max-width: 992px) {
+		position: fixed;
+		z-index: 3;
+		width: 100vw;
+		height: 100vh;
+		padding: 50px 30px;
+		top: 0px;
+		overflow: auto;
+		background: linear-gradient(
+			103deg,
+			#fceed5 6.43%,
+			#fceed5 78.33%,
+			#ffe7ba 104.24%
+		);
+		left: -100%;
+		opacity: 0;
+		padding-top: 70px;
+		display: flex;
+		transition: opacity 0.3s, left 0.5s;
+
+		&[data-active="true"] {
+			left: 0px;
+			opacity: 1;
+		}
+	}
+}
+
+.list {
+	display: flex;
+
+	@media (max-width: 992px) {
+		flex-direction: column;
+		margin: auto;
+	}
+}
+
+.item {
+	color: #003459;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+	margin-right: 48px;
+	position: relative;
+	text-align: center;
+
+	&::after {
+		display: block;
+		position: absolute;
+		right: 0;
+		width: 0;
+		height: 2px;
+		background-color: #003459;
+		content: "";
+		transition: width 0.25s ease-out;
+
+		@media (max-width: 992px) {
+			height: 3px;
+		}
+	}
+
+	&:hover {
+		&::after {
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 992px) {
+		font-size: 32px;
+		line-height: 70px;
+		margin-right: initial;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 28px;
+		line-height: 60px;
+	}
+
+	@media (max-width: 468px) {
+		font-size: 24px;
+		line-height: 60px;
+	}
+}
+
+.wrapper__burger {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	overflow: hidden;
+
+	span {
+		position: absolute;
+		top: calc(50% - 2px);
+		left: 0;
+		height: 4px;
+		width: 100%;
+		background-color: #003459;
+		transition: all 0.5s ease-in-out;
+
+		&:first-child {
+			top: 0;
+		}
+
+		&:last-child {
+			top: auto;
+			bottom: 0;
+		}
+	}
+
+	&[data-active="true"] {
+		span {
+			opacity: 0;
+			left: -60px;
+
+			&:first-child {
+				left: 0;
+				top: 9px;
+				transform: rotate(-225deg);
+				opacity: 1;
+			}
+
+			&:last-child {
+				left: 0;
+				top: 9px;
+				transform: rotate(225deg);
+				opacity: 1;
+			}
+		}
+	}
+
+	@media (min-width: 993px) {
+		display: none;
+	}
+}
+
+.menu__burger {
+	z-index: 5;
+	display: block;
+	position: relative;
+	height: 24px;
+	width: 40px;
+}
