@@ -1,19 +1,23 @@
-// import { Header } from "./Header";
+import { Header } from "./Header";
 import { Footer } from "./Footer";
-// import { Search } from "./Search";
-// import { Card } from "./Card";
-// import { CardsField } from "./CardsField";
-// import { MultiFilter } from "./MultiFilter";
-// import { ElfsightWidget } from "./ElfsightWidget";
-// import { SwiperPagination } from "./SwiperPagination";
+import { Search } from "./Search";
+import { Card } from "./Card";
+import { CardsField } from "./CardsField";
+import { Navigation } from "./Navigation";
+import { Number } from "./Number";
+import { MultiFilter } from "./MultiFilter";
+import { ElfsightWidget } from "./ElfsightWidget";
+import { SwiperPagination } from "./SwiperPagination";
 
 export {
-	// Header,
+	Header,
 	Footer,
-	// Search,
-	// Card,
-	// CardsField,
-	// MultiFilter,
-	// ElfsightWidget,
-	// SwiperPagination,
+	Search,
+	Card,
+	CardsField,
+	Navigation,
+	Number,
+	MultiFilter,
+	ElfsightWidget,
+	SwiperPagination,
 };

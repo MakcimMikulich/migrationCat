@@ -1,3 +1,3 @@
-import { navLinks, Navigation } from "./Navigation";
+import { Navigation } from "./Navigation";
 
-export { navLinks, Navigation };
+export { Navigation };

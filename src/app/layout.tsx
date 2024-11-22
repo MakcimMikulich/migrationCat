@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../libs/index.scss";
+import "../libs/reset.scss";
+import "../libs/vars.scss";
+import "../libs/App.scss";
 import { Footer } from "@/components";
+// import { useScrollToTop } from "@/hooks";
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -15,8 +19,10 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<main>{children}</main>
-				<Footer />
+				<div className="app">
+					<main>{children}</main>
+					<Footer />
+				</div>
 			</body>
 		</html>
 	);

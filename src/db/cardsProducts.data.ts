@@ -1,16 +1,17 @@
 // import warmNest from '../../public/Card/dogs/warm-nest.png'
-import warmNest from "../public/./Card/WarmNest.png";
-import zealanda from "../public/Card/zealanda.png";
-import reflex from "../public/./Card/reflex.png";
-import omegaGold from "../public/./Card/omegaGold.png";
-import cowBoy from "../public/Card/cowboy.png";
-import ropeBall from "../public/Card/roleBall.png";
-import headBand from "../public/Card/headband.png";
-import petToy from "../public/Card/petToy.png";
-import { aboutDog, dogInfoType } from "./cardsDogs.data.ts";
+import warmNest from "@/assets/Card/WarmNest.png";
+import zealanda from "@/assets/Card/zealanda.png";
+import reflex from "@/assets/Card/reflex.png";
+import omegaGold from "@/assets/Card/omegaGold.png";
+import cowBoy from "@/assets/Card/cowboy.png";
+import ropeBall from "@/assets/Card/roleBall.png";
+import headBand from "@/assets/Card/headband.png";
+import petToy from "@/assets/Card/petToy.png";
+import { aboutDog, dogInfoType } from "./cardsDogs.data";
+import { StaticImageData } from "next/image";
 
 export interface ICard {
-	image: string;
+	image: StaticImageData;
 	title: string;
 	cardInfo: productInfoType | dogInfoType;
 	price: string;

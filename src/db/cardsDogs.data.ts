@@ -1,12 +1,12 @@
-import dog8 from "../public/Card/image2.png";
-import dog1 from "../public/Card/image2.png";
-import dog2 from "../public/Card/image2.png";
-import dog3 from "../public/Card/image2.png";
-import dog4 from "../public/Card/image2.png";
-import dog5 from "../public/Card/image2.png";
-import dog6 from "../public/Card/image2.png";
-import dog7 from "../public/Card/image2.png";
-import { ICard } from "./cardsProducts.data.ts";
+import dog8 from "@/assets/Card/image2.png";
+import dog1 from "@/assets/Card/image2.png";
+import dog2 from "@/assets/Card/image2.png";
+import dog3 from "@/assets/Card/image2.png";
+import dog4 from "@/assets/Card/image2.png";
+import dog5 from "@/assets/Card/image2.png";
+import dog6 from "@/assets/Card/image2.png";
+import dog7 from "@/assets/Card/image2.png";
+import { ICard } from "./cardsProducts.data";
 
 export interface dogInfoType {
 	Gene?: string;

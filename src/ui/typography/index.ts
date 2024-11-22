@@ -1,3 +1,3 @@
-import { Heading } from "./typography.jsx";
+import { Heading } from "./typography";
 
 export { Heading };

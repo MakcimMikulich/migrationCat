@@ -1,5 +1,5 @@
-import rectangle from "./../../public/promInfo/rectangle.svg";
-import { Number } from "../../components/Number";
+import rectangle from "@/assets/promInfo/rectangle.svg";
+import { Number } from "@/components";
 import styles from "./PromInfo.module.scss";
 
 const data = [
@@ -43,7 +43,7 @@ export const PromInfo = () => {
 						<span className={styles.content__description}>{item.text}</span>
 						<img
 							className={styles.content__rectangle}
-							src={rectangle}
+							src={rectangle.src}
 							alt="rectangle"
 						/>
 					</div>
