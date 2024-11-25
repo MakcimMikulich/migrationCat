@@ -4,7 +4,6 @@ import "../libs/reset.scss";
 import "../libs/vars.scss";
 import "../libs/App.scss";
 import { Footer } from "@/components";
-// import { useScrollToTop } from "@/hooks";
 
 export const metadata: Metadata = {
 	title: "Create Next App",
