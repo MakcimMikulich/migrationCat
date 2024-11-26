@@ -8,10 +8,12 @@ import { Number } from "./Number";
 import { MultiFilter } from "./MultiFilter";
 import { ElfsightWidget } from "./ElfsightWidget";
 import { SwiperPagination } from "./SwiperPagination";
+import { WrapperFilter } from "./WrapperFilter";
 
 export {
 	Header,
 	Footer,
+	WrapperFilter,
 	Search,
 	Card,
 	CardsField,

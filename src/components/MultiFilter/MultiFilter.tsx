@@ -9,7 +9,7 @@ export const MultiFilter = ({
 	setOpenFilter,
 }: MultiFilterProps) => {
 	const { params, handlerCheckBox } = useMultiFilterState();
-	console.log(params);
+	// console.log(params);
 
 	const className =
 		styles.multifilter__wrapper + (openFilter ? ` ${styles.active}` : "");

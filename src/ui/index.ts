@@ -3,6 +3,14 @@ import { Button } from "./button";
 import { Heading } from "./typography";
 import { CheckBox } from "./checkBox";
 import { PromInfo } from "./promInfo";
-import { FAQ } from "./FAQ";
+import { FAQ, FAQComponent } from "./FAQ";
 
-export { SectionHeading, Button, Heading, CheckBox, PromInfo, FAQ };
+export {
+	SectionHeading,
+	Button,
+	Heading,
+	CheckBox,
+	PromInfo,
+	FAQ,
+	FAQComponent,
+};

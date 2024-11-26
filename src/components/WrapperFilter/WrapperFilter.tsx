@@ -1,16 +1,17 @@
 "use client";
 
 import React from "react";
-import { Heading } from "@/ui";
+import { Heading } from "@/ui/typography";
 import { ourDogs } from "@/db";
-import { CardsField, MultiFilter } from "@/components";
+import { MultiFilter } from "@/components";
+import { CardsField } from "@/components/CardsField";
 import { useEffect, useState } from "react";
 import { useBodyLock, useWindowSize } from "@/hooks";
-import styles from "./Category.module.scss";
+import styles from "./WrapperFilter.module.scss";
 
 const options = ["popular", "order", "date"];
 
-const Wrapper = () => {
+const WrapperFilter = () => {
 	const windowSize = useWindowSize();
 	const mobileSize = 768;
 
@@ -55,4 +56,4 @@ const Wrapper = () => {
 	);
 };
 
-export default Wrapper;
+export { WrapperFilter };

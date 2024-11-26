@@ -43,7 +43,7 @@ const arrData = [
 	},
 ];
 
-export const FAQ = () => {
+const FAQ = () => {
 	let acc: any;
 	useEffect(() => {
 		acc = new Accordion(".accordion-container");
@@ -53,8 +53,7 @@ export const FAQ = () => {
 	let observer = 0;
 
 	const handlerClick = (index: number) => {
-		console.log("observer", observer);
-		console.log("index", index);
+		// console.log("observer", observer);
 
 		if (observer === index) {
 			return;
@@ -89,3 +88,5 @@ export const FAQ = () => {
 		</div>
 	);
 };
+
+export default FAQ;

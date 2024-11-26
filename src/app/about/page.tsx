@@ -1,5 +1,5 @@
 import { ElfsightWidget, Header, SwiperPagination } from "@/components";
-import { FAQ, PromInfo, SectionHeading } from "@/ui";
+import { FAQComponent, PromInfo, SectionHeading } from "@/ui";
 import styles from "./About.module.scss";
 import imgCattery from "@/assets/About/about-cattery.webp";
 // @ts-ignore
@@ -51,7 +51,7 @@ const sections = [
 					note="Do you have any questions?"
 				/>
 
-				<FAQ />
+				<FAQComponent />
 			</div>
 		),
 	},

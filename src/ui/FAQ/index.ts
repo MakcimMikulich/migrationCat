@@ -1,3 +1,4 @@
-import { FAQ } from "./FAQ";
+import FAQ from "./FAQ";
+import FAQComponent from "./FAQComponent";
 
-export { FAQ };
+export { FAQ, FAQComponent };

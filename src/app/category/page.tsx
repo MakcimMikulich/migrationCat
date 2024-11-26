@@ -1,6 +1,5 @@
 import styles from "./Category.module.scss";
-import { Header } from "@/components";
-import Wrapper from "./Wrapper";
+import { Header, WrapperFilter } from "@/components";
 
 export const Category = () => {
 	return (
@@ -8,7 +7,9 @@ export const Category = () => {
 			<Header />
 			<div className="container">
 				<section>
-					<div className={styles.category}>{/* <Wrapper /> */}</div>
+					<div className={styles.category}>
+						<WrapperFilter />
+					</div>
 				</section>
 			</div>
 		</>

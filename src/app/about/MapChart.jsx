@@ -1,6 +1,5 @@
 "use client";
-
-import React from "react";
+import { useState, useEffect } from "react";
 import {
 	ComposableMap,
 	Geographies,
@@ -30,7 +29,7 @@ const markers = [
 ];
 
 const MapChart = () => {
-	const [activeName, setActiveName] = React.useState(
+	const [activeName, setActiveName] = useState(
 		markers.map((marker) => marker.name)
 	);
 
@@ -50,6 +49,16 @@ const MapChart = () => {
 		}, 3000);
 	};
 
+	const [geoData, setGeoData] = useState(null);
+
+	useEffect(() => {
+		fetch(geoUrl)
+			.then((response) => response.json())
+			.then((data) => setGeoData(data));
+	}, []);
+
+	if (!geoData) return <div style={{ color: "black" }}>Loading map...</div>;
+
 	return (
 		<ComposableMap
 			// projection="geoAzimuthalEqualArea"
@@ -58,7 +67,7 @@ const MapChart = () => {
 				scale: 190,
 			}}
 		>
-			<Geographies geography={"./features.json"}>
+			<Geographies geography={geoUrl}>
 				{({ geographies }) =>
 					geographies.map((geo) => {
 						return (

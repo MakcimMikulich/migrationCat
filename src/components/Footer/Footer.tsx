@@ -11,7 +11,7 @@ export const Footer = () => {
 				<div className={styles.footer__links}>
 					<ul className={styles.nav__links}>
 						{navLinks.map((navLink) => (
-							<Link key={navLink} href={navLink.toLowerCase()}>
+							<Link key={navLink} href={"/" + navLink.toLowerCase()}>
 								<li className={styles.link__item}>{navLink}</li>
 							</Link>
 						))}
