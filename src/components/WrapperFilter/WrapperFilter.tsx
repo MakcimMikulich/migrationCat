@@ -3,7 +3,7 @@
 import React from "react";
 import { Heading } from "@/ui/typography";
 import { ourDogs } from "@/db";
-import { MultiFilter } from "@/components";
+import { MultiFilter, useMultiFilterState } from "@/components/MultiFilter";
 import { CardsField } from "@/components/CardsField";
 import { useEffect, useState } from "react";
 import { useBodyLock, useWindowSize } from "@/hooks";
@@ -21,11 +21,23 @@ const WrapperFilter = () => {
 		setFullField(windowSize > mobileSize);
 	}, [windowSize]);
 
+	const { params, handlerCheckBox } = useMultiFilterState();
+
 	const [openFilter, setOpenFilter] = useBodyLock();
+
+	const activeFilters = Object.entries(params)
+		.filter(([_, isActive]) => isActive)
+		.map(([key]) => key);
+
+	console.log(activeFilters);
 
 	return (
 		<>
-			<MultiFilter openFilter={openFilter} setOpenFilter={setOpenFilter} />
+			<MultiFilter
+				openFilter={openFilter}
+				setOpenFilter={setOpenFilter}
+				handlerCheckBox={handlerCheckBox}
+			/>
 			<div className={styles.field}>
 				<div className={styles.field__header}>
 					<div className={styles.header__left}>

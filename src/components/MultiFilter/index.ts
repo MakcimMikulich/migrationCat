@@ -1,3 +1,4 @@
 import { MultiFilter } from "./MultiFilter";
+import { useMultiFilterState } from "./useMultiFilterState";
 
-export { MultiFilter };
+export { MultiFilter, useMultiFilterState };

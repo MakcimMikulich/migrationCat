@@ -1,5 +1,6 @@
 import styles from "./MultiFilter.module.scss";
-import { CheckBox, Heading } from "../../ui";
+import { CheckBox } from "@/ui/checkBox";
+import { Heading } from "@/ui/typography";
 import { filters } from "./MultiFilter.data";
 import { useMultiFilterState } from "./useMultiFilterState";
 import type { MultiFilterProps } from "./types";
@@ -7,10 +8,8 @@ import type { MultiFilterProps } from "./types";
 export const MultiFilter = ({
 	openFilter,
 	setOpenFilter,
+	handlerCheckBox,
 }: MultiFilterProps) => {
-	const { params, handlerCheckBox } = useMultiFilterState();
-	// console.log(params);
-
 	const className =
 		styles.multifilter__wrapper + (openFilter ? ` ${styles.active}` : "");
 

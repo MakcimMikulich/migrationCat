@@ -7,6 +7,10 @@ export const useBodyLock = (
 	const [isActive, setIsActive] = useState(initialState);
 
 	useEffect(() => {
+		// Проверяем, доступен ли объект document
+		if (typeof document === "undefined") {
+			return; // Прекращаем выполнение эффекта на сервере
+		}
 		if (isActive) {
 			document.body.classList.add("lock");
 		} else {

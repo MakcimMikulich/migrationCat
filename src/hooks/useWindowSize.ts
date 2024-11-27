@@ -1,20 +1,31 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import { debounce } from "../utils/helpers";
 
 export const useWindowSize = () => {
-	const [windowSize, setWindowSize] = useState(window.innerWidth);
+	// Устанавливаем значение по умолчанию для server-side rendering
+	const [windowSize, setWindowSize] = useState(() => {
+		return typeof window !== "undefined" ? window.innerWidth : 1024; // Выберите значение по умолчанию, например, 1024 (для десктопа)
+	});
 
 	useEffect(() => {
+		// Прекращаем выполнение, если выполняется на сервере
+		if (typeof window === "undefined") {
+			return;
+		}
+
 		const handleResize = () => {
 			setWindowSize(window.innerWidth);
 		};
-		const debouncehandler = debounce(handleResize);
 
-		window.addEventListener("resize", debouncehandler);
+		// Устанавливаем начальное значение и добавляем обработчик событий
+		handleResize();
+		const debounceHandler = debounce(handleResize);
+		window.addEventListener("resize", debounceHandler);
 
 		return () => {
-			window.removeEventListener("resize", debouncehandler);
+			window.removeEventListener("resize", debounceHandler);
 		};
 	}, []);
 
