@@ -2,7 +2,6 @@ import styles from "./MultiFilter.module.scss";
 import { CheckBox } from "@/ui/checkBox";
 import { Heading } from "@/ui/typography";
 import { filters } from "./MultiFilter.data";
-import { useMultiFilterState } from "./useMultiFilterState";
 import type { MultiFilterProps } from "./types";
 
 export const MultiFilter = ({
@@ -24,6 +23,7 @@ export const MultiFilter = ({
 						<div className={styles.filter__header}>{filter.header}</div>
 						{filter.fields.map((field) => (
 							<CheckBox
+								header={filter.header}
 								key={field.name}
 								label={field.name}
 								color={field.color}

@@ -2,11 +2,12 @@ import styles from "./CheckBox.module.scss";
 
 interface CheckBoxProps {
 	label: string;
+	header: string;
 	color: string | null;
-	handler: (name: string, check: boolean) => void;
+	handler: (header: string, name: string, check: boolean) => void;
 }
 
-export const CheckBox = ({ label, color, handler }: CheckBoxProps) => {
+export const CheckBox = ({ header, label, color, handler }: CheckBoxProps) => {
 	return (
 		<div className={styles.check}>
 			<label className={styles.container}>
@@ -14,7 +15,7 @@ export const CheckBox = ({ label, color, handler }: CheckBoxProps) => {
 					value={label}
 					type="checkbox"
 					onChange={(e) => {
-						handler(label, e.target.checked);
+						handler(header, label, e.target.checked);
 					}}
 				/>
 				{color && (

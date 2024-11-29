@@ -1,12 +1,14 @@
 interface MultiFilterProps {
 	openFilter: boolean;
 	setOpenFilter: (state: boolean) => void;
-	handlerCheckBox: (name: string, checked: boolean) => void;
+	handlerCheckBox: (header: string, name: string, checked: boolean) => void;
 }
 
-interface Params {
-	[key: string]: boolean;
-}
+type Params = {
+	[key: string]: {
+		[key: string]: boolean;
+	};
+};
 
 interface Filter {
 	header: string;

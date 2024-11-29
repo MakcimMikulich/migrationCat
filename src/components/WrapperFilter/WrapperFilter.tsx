@@ -25,11 +25,37 @@ const WrapperFilter = () => {
 
 	const [openFilter, setOpenFilter] = useBodyLock();
 
-	const activeFilters = Object.entries(params)
-		.filter(([_, isActive]) => isActive)
-		.map(([key]) => key);
+	console.log(params);
 
-	console.log(activeFilters);
+	// Функция для фильтрации массива
+
+	const activeFilters = Object.entries(params).reduce(
+		(acc, [header, fields]) => {
+			const activeFields = Object.entries(fields)
+				.filter(([key, value]) => value) // Оставляем только те, что `true`
+				.map(([key]) => ({ header, key }));
+			return [...acc, ...activeFields];
+		},
+		[] as { header: string; key: string }[]
+	);
+
+	console.log(activeFilters, "activeFilters");
+
+	const filteredDogs = ourDogs.filter((dog) =>
+		activeFilters.every(({ header, key }) =>
+			dog.dogInfo.some(
+				(info) => info.field === header && info.value.includes(key)
+			)
+		)
+	);
+
+	// setDogs(filteredDogs);
+
+	// const activeFilters = Object.entries(params)
+	// 	.filter(([_, isActive]) => isActive)
+	// 	.map(([key]) => key);
+
+	// console.log(activeFilters);
 
 	return (
 		<>
@@ -62,7 +88,7 @@ const WrapperFilter = () => {
 						</select>
 					</div>
 				</div>
-				<CardsField cards={ourDogs} fullField={fullField} />
+				<CardsField cards={filteredDogs} fullField={fullField} />
 			</div>
 		</>
 	);

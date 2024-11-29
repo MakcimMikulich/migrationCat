@@ -6,19 +6,29 @@ import { filters } from "./MultiFilter.data";
 
 export const useMultiFilterState = () => {
 	const [params, setParams] = useState<Params>(() => {
-		return filters.reduce((acc, filter) => {
-			filter.fields.forEach((field) => {
-				acc[field.name] = false;
+		const paramsAccumulator: Params = {};
+
+		filters.forEach((category) => {
+			const fieldOptions: Record<string, boolean> = {};
+
+			category.fields.forEach((field) => {
+				fieldOptions[field.name] = false;
 			});
-			return acc;
-		}, {} as Params);
+
+			paramsAccumulator[category.header] = fieldOptions;
+		});
+
+		return paramsAccumulator;
 	});
 
-	const handlerCheckBox = (name: string, checked: boolean) => {
+	const handlerCheckBox = (header: string, name: string, checked: boolean) => {
 		setParams((prevState) => {
 			return {
 				...prevState,
-				[name]: checked,
+				[header]: {
+					...prevState[header],
+					[name]: checked,
+				},
 			};
 		});
 	};
