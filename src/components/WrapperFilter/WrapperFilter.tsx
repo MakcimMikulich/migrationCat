@@ -8,6 +8,7 @@ import { CardsField } from "@/components/CardsField";
 import { useEffect, useState } from "react";
 import { useBodyLock, useWindowSize } from "@/hooks";
 import styles from "./WrapperFilter.module.scss";
+import { filter } from "./filter";
 
 const options = ["popular", "order", "date"];
 
@@ -27,35 +28,7 @@ const WrapperFilter = () => {
 
 	console.log(params);
 
-	// Функция для фильтрации массива
-
-	const activeFilters = Object.entries(params).reduce(
-		(acc, [header, fields]) => {
-			const activeFields = Object.entries(fields)
-				.filter(([key, value]) => value) // Оставляем только те, что `true`
-				.map(([key]) => ({ header, key }));
-			return [...acc, ...activeFields];
-		},
-		[] as { header: string; key: string }[]
-	);
-
-	console.log(activeFilters, "activeFilters");
-
-	const filteredDogs = ourDogs.filter((dog) =>
-		activeFilters.every(({ header, key }) =>
-			dog.dogInfo.some(
-				(info) => info.field === header && info.value.includes(key)
-			)
-		)
-	);
-
-	// setDogs(filteredDogs);
-
-	// const activeFilters = Object.entries(params)
-	// 	.filter(([_, isActive]) => isActive)
-	// 	.map(([key]) => key);
-
-	// console.log(activeFilters);
+	const filterDogs = filter(ourDogs, params);
 
 	return (
 		<>
@@ -88,7 +61,7 @@ const WrapperFilter = () => {
 						</select>
 					</div>
 				</div>
-				<CardsField cards={filteredDogs} fullField={fullField} />
+				<CardsField cards={filterDogs} fullField={fullField} />
 			</div>
 		</>
 	);

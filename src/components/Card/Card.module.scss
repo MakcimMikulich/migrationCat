@@ -1,11 +1,10 @@
 .card {
-	max-width: 280px;
-	min-width: 100%;
+	max-width: 480px;
 	padding: 8px 8px 0 8px;
 	text-align: start;
 	height: 100%;
 
-	display: flex;
+	display: inline-flex;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 8px;
