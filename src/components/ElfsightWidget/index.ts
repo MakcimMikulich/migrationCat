@@ -1,3 +1,3 @@
-import { ElfsightWidget } from "./ElfsightWidget";
+import ElfsightWidgetComponent from "./ElfsightWidgetComponent";
 
-export { ElfsightWidget };
+export { ElfsightWidgetComponent };

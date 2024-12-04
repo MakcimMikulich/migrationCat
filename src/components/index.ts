@@ -6,7 +6,7 @@ import { CardsField } from "./CardsField";
 import { Navigation } from "./Navigation";
 import { Number } from "./Number";
 import { MultiFilter } from "./MultiFilter";
-import { ElfsightWidget } from "./ElfsightWidget";
+import { ElfsightWidgetComponent } from "./ElfsightWidget";
 import { SwiperPagination } from "./SwiperPagination";
 import { WrapperFilter } from "./WrapperFilter";
 
@@ -20,6 +20,6 @@ export {
 	Navigation,
 	Number,
 	MultiFilter,
-	ElfsightWidget,
+	ElfsightWidgetComponent,
 	SwiperPagination,
 };

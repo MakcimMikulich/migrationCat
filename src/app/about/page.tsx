@@ -1,4 +1,8 @@
-import { ElfsightWidget, Header, SwiperPagination } from "@/components";
+import {
+	ElfsightWidgetComponent,
+	Header,
+	SwiperPagination,
+} from "@/components";
 import { FAQComponent, PromInfo, SectionHeading } from "@/ui";
 import styles from "./About.module.scss";
 import imgCattery from "@/assets/About/about-cattery.webp";
@@ -58,7 +62,7 @@ const sections = [
 	{
 		content: (
 			<div className="container">
-				<ElfsightWidget />
+				<ElfsightWidgetComponent />
 			</div>
 		),
 	},

@@ -1,7 +1,6 @@
 "use client";
-
+import styles from "./ElfsightWidget.module.scss";
 import { useEffect } from "react";
-import "./ElfsightWidget.scss";
 
 // Объявляем глобально функцию iFrameResize для TypeScript
 declare global {
@@ -10,7 +9,7 @@ declare global {
 	}
 }
 
-export const ElfsightWidget = () => {
+const ElfsightWidget = () => {
 	useEffect(() => {
 		const script = document.createElement("script");
 		script.src =
@@ -24,14 +23,21 @@ export const ElfsightWidget = () => {
 	}, []);
 
 	return (
-		<iframe
-			onLoad={(event) => {
-				if (window.iFrameResize && event.target instanceof HTMLIFrameElement) {
-					window.iFrameResize({}, event.target);
-				}
-			}}
-			src="https://0ad0da4c7c8a4bfe973fb50f7dad826f.elf.site"
-			style={{ border: "none", width: "100%" }}
-		></iframe>
+		<div className={styles.wrapper}>
+			<iframe
+				onLoad={(event) => {
+					if (
+						window.iFrameResize &&
+						event.target instanceof HTMLIFrameElement
+					) {
+						window.iFrameResize({}, event.target);
+					}
+				}}
+				src="https://0ad0da4c7c8a4bfe973fb50f7dad826f.elf.site"
+				style={{ border: "none", width: "100%" }}
+			></iframe>
+		</div>
 	);
 };
+
+export default ElfsightWidget;
