@@ -14,7 +14,7 @@ export const Navigation = () => {
 					{navLinks.map((link) => (
 						<Link
 							key={link}
-							href={"/" + link.toLowerCase()}
+							href={"./" + link.toLowerCase()}
 							onClick={() => setIsActive(false)}
 						>
 							<li className={styles.item}>{link}</li>

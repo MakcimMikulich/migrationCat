@@ -11,7 +11,7 @@ interface CardProps {
 
 export const Card = (props: CardProps) => {
 	return (
-		<Link href={`/category/${props.cardId + 1}`}>
+		<Link href={`./category/${props.cardId + 1}`}>
 			<div className={styles.card}>
 				<div className={styles.image__wrapper}>
 					<img

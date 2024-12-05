@@ -3,7 +3,7 @@ import {
 	Header,
 	SwiperPagination,
 } from "@/components";
-import { FAQComponent, PromInfo, SectionHeading } from "@/ui";
+import { FAQComponent, PromInfo, SectionHeading, SeoFAQ } from "@/ui";
 import styles from "./About.module.scss";
 import imgCattery from "@/assets/About/about-cattery.webp";
 // @ts-ignore
@@ -54,7 +54,7 @@ const sections = [
 					title="We were ready for this"
 					note="Do you have any questions?"
 				/>
-
+				<SeoFAQ />
 				<FAQComponent />
 			</div>
 		),

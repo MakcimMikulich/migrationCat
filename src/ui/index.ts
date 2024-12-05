@@ -3,7 +3,7 @@ import { Button } from "./button";
 import { Heading } from "./typography";
 import { CheckBox } from "./checkBox";
 import { PromInfo } from "./promInfo";
-import { FAQ, FAQComponent } from "./FAQ";
+import { FAQ, FAQComponent, SeoFAQ } from "./FAQ";
 
 export {
 	SectionHeading,
@@ -13,4 +13,5 @@ export {
 	PromInfo,
 	FAQ,
 	FAQComponent,
+	SeoFAQ,
 };
