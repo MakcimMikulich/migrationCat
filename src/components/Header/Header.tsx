@@ -7,7 +7,7 @@ export const Header = () => {
 	return (
 		<div className="container">
 			<div className={styles.header}>
-				<Link href={"/home"}>
+				<Link href={"./home"}>
 					<img
 						className={styles.logo}
 						width={115}

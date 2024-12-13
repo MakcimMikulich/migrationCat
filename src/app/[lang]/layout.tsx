@@ -1,4 +1,6 @@
 import { getTranslations } from "@/utils/getTranslations";
+import ClientProvider from "@/utils/ClientProvider";
+import Link from "next/link";
 
 export default async function LangLayout({
 	children,
@@ -11,19 +13,22 @@ export default async function LangLayout({
 
 	const translations = await getTranslations(lang);
 
-	console.log(translations);
-
 	return (
 		<html lang={lang}>
 			<body>
 				<header>
 					<nav>
-						<a href="/en/home">English</a>
-						<a href="/ru/home">Русский</a>
-						<a href="/china/home">中文</a>
+						<Link href="/en/home">English</Link>
+						<Link href="/ru/home">Русский</Link>
+						<Link href="/china/home">中文</Link>
 					</nav>
 				</header>
-				<main>{children}</main>
+				<main>
+					{/* Оборачиваем детей в клиентский провайдер */}
+					<ClientProvider translations={translations}>
+						{children}
+					</ClientProvider>
+				</main>
 			</body>
 		</html>
 	);
