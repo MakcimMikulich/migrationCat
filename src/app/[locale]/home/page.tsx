@@ -1,9 +1,12 @@
+"use client";
+
 import styles from "./Home.module.scss";
 // import img from "../../assets/home/Frame 146.png";
 import { CardsField, Header } from "@/components";
 import { Button, SectionHeading } from "@/ui";
 import { ourDogs, ourProduct } from "@/db";
 import Play from "@/assets/button/icon_play.svg";
+import { useTranslations } from "next-intl";
 
 const sections = [
 	{
@@ -27,6 +30,10 @@ const sections = [
 ];
 
 const Home = () => {
+	const t = useTranslations("HomePage");
+
+	console.log(t("welcome"));
+
 	return (
 		<>
 			<div className={styles.wrapper}>
@@ -49,7 +56,7 @@ const Home = () => {
 					<div className="container">
 						<div className={styles.preview__body}>
 							<div className={styles.preview__left}>
-								<div className={styles.left__title}>One more friend</div>
+								<div className={styles.left__title}>{t("welcome")}</div>
 								<div className={styles.left__subtitle}>Thousands more fun!</div>
 								<p className={styles.left__text}>
 									Having a pet means you have more joy, a new friend, a happy
