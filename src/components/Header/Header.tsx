@@ -2,6 +2,7 @@ import styles from "./Header.module.scss";
 import logo from "@/assets/Header/logo.svg";
 import { Search, Navigation } from "../";
 import Link from "next/link";
+import { Select } from "@/ui";
 
 export const Header = () => {
 	return (
@@ -19,7 +20,7 @@ export const Header = () => {
 
 				<div className={styles.aside}>
 					<Navigation />
-					<Search placeHolder={"Search"} />
+					{/* <Search placeHolder={"Search"} /> */}
 					{/* <Button type={"default"}>
 						<span>Join the community</span>
 					</Button> */}
@@ -27,6 +28,7 @@ export const Header = () => {
 					>
 						VND ^
 					</div> */}
+					<Select />
 				</div>
 			</div>
 		</div>

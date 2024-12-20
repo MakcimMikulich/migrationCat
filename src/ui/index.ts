@@ -4,6 +4,7 @@ import { Heading } from "./typography";
 import { CheckBox } from "./checkBox";
 import { PromInfo } from "./promInfo";
 import { FAQComponent, SeoFAQ } from "./FAQ";
+import { Select } from "./select";
 
 export {
 	SectionHeading,
@@ -13,4 +14,5 @@ export {
 	PromInfo,
 	FAQComponent,
 	SeoFAQ,
+	Select,
 };
