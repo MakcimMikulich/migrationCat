@@ -1,7 +1,43 @@
 {
-	"HomePage": {
-		"welcome": "One more friend",
+	"common": {
+		"buttons": {
+			"Hello": "Hello"
+		}
+	},
+	"navLinks": {
+		"Home": "Home",
+		"Category": "Category",
+		"About": "About",
+		"Contact": "Contact"
+	},
+
+	"footer": {
+		"copyright": "© 2025 Monito. All rights reserved.",
+		"terms": "Terms of Service",
+		"privacy": "Privacy Policy"
+	},
+
+	"home": {
+		"title": "One more friend",
 		"subTitle": "Thousands more fun!",
-		"description": "Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!"
+		"description": "Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!",
+		"sections": {
+			"sectionOne": {
+				"title": "Take A look At Some Of Our Pets",
+				"note": "What new?",
+				"button": {
+					"text": "View more",
+					"link": "category"
+				}
+			},
+			"sectionTwo": {
+				"title": "Our Products",
+				"note": "Hard to choose right products for your pets?",
+				"button": {
+					"text": "View more",
+					"link": "category"
+				}
+			}
+		}
 	}
 }

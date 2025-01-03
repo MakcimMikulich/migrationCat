@@ -3,8 +3,12 @@ import { navLinks } from "@/db/content.data";
 import { externalLinks } from "./externalLinks";
 import Link from "next/link";
 import logo from "@/assets/Header/logo.svg";
+import { useTranslations } from "next-intl";
 
 export const Footer = () => {
+	const tLinks = useTranslations("navLinks");
+	const t = useTranslations("footer");
+
 	return (
 		<div className={styles.footer__wrapper}>
 			<footer className={styles.footer + " container"}>
@@ -12,7 +16,7 @@ export const Footer = () => {
 					<ul className={styles.nav__links}>
 						{navLinks.map((navLink) => (
 							<Link key={navLink} href={"./" + navLink.toLowerCase()}>
-								<li className={styles.link__item}>{navLink}</li>
+								<li className={styles.link__item}>{tLinks(navLink)}</li>
 							</Link>
 						))}
 					</ul>
@@ -29,12 +33,13 @@ export const Footer = () => {
 						<img src={logo.src} alt="" />
 					</div>
 					<div className={styles.footer__info}>
-						<p>© 2024 Monito. All rights reserved.</p>
+						<p>{t("copyright")}</p>
 						<div className={styles.footer__image}>
 							<img src={logo.src} alt="" />
 						</div>
 						<p className={styles.footer__policy}>
-							Terms of Service Privacy Policy
+							{t("terms")} <br />
+							{t("privacy")}
 						</p>
 					</div>
 				</div>

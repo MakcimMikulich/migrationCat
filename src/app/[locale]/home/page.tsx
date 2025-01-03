@@ -8,31 +8,29 @@ import { ourDogs, ourProduct } from "@/db";
 import Play from "@/assets/button/icon_play.svg";
 import { useTranslations } from "next-intl";
 
-const sections = [
-	{
-		title: "Take A look At Some Of Our Pets",
-		note: "What new?",
-		button: {
-			text: "View more",
-			link: "category",
-		},
-		content: <CardsField cards={ourDogs} />,
-	},
-	{
-		title: "Our Products",
-		note: "Hard to choose right products for your pets?",
-		button: {
-			text: "View more",
-			link: "category",
-		},
-		content: <CardsField cards={ourProduct} />,
-	},
-];
-
 const Home = () => {
-	const t = useTranslations("HomePage");
+	const t = useTranslations("home");
 
-	console.log(t("welcome"));
+	const sections = [
+		{
+			title: t("sections.sectionOne.title"),
+			note: t("sections.sectionOne.note"),
+			button: {
+				text: t("sections.sectionOne.button.text"),
+				link: t("sections.sectionOne.button.link"),
+			},
+			content: <CardsField cards={ourDogs} />,
+		},
+		{
+			title: t("sections.sectionTwo.title"),
+			note: t("sections.sectionTwo.note"),
+			button: {
+				text: t("sections.sectionTwo.button.text"),
+				link: t("sections.sectionTwo.button.link"),
+			},
+			content: <CardsField cards={ourProduct} />,
+		},
+	];
 
 	return (
 		<>
@@ -56,13 +54,9 @@ const Home = () => {
 					<div className="container">
 						<div className={styles.preview__body}>
 							<div className={styles.preview__left}>
-								<div className={styles.left__title}>{t("welcome")}</div>
-								<div className={styles.left__subtitle}>Thousands more fun!</div>
-								<p className={styles.left__text}>
-									Having a pet means you have more joy, a new friend, a happy
-									person who will always be with you to have fun. We have 200+
-									different pets that can meet your needs!
-								</p>
+								<div className={styles.left__title}>{t("title")}</div>
+								<div className={styles.left__subtitle}>{t("subTitle")}</div>
+								<p className={styles.left__text}>{t("description")}</p>
 								<div className={styles.button__wrapper}>
 									<Button type={"default"}> Hello</Button>
 									<Button type={"empty"}>

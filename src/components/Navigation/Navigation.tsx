@@ -3,9 +3,12 @@ import styles from "./Navigation.module.scss";
 import Link from "next/link";
 import { useBodyLock } from "../../hooks";
 import { navLinks } from "@/db/content.data";
+import { useTranslations } from "next-intl";
 
 export const Navigation = () => {
 	const [isActive, setIsActive] = useBodyLock();
+
+	const t = useTranslations("navLinks");
 
 	return (
 		<>
@@ -17,7 +20,7 @@ export const Navigation = () => {
 							href={"./" + link.toLowerCase()}
 							onClick={() => setIsActive(false)}
 						>
-							<li className={styles.item}>{link}</li>
+							<li className={styles.item}>{t(link)}</li>
 						</Link>
 					))}
 				</ul>
