@@ -58,9 +58,9 @@ const Home = () => {
 								<div className={styles.left__subtitle}>{t("subTitle")}</div>
 								<p className={styles.left__text}>{t("description")}</p>
 								<div className={styles.button__wrapper}>
-									<Button type={"default"}> Hello</Button>
+									<Button type={"default"}>{t("buttonDefault")}</Button>
 									<Button type={"empty"}>
-										<span>Hello</span>
+										<span>{t("buttonEmpty")}</span>
 										<img src={Play.src} alt="play" />
 									</Button>
 								</div>
