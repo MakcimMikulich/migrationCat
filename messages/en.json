@@ -41,5 +41,28 @@
 		},
 		"buttonDefault": "Hello",
 		"buttonEmpty": "Hello"
+	},
+
+	"contact": {
+		"title": "Contact with Monito",
+		"description1": "Discover a lifetime of love and joy with your perfect furry companion!",
+		"description2": "At MeoWoff, we specialize in matching families with the ideal pet from the finest European catteries like AlbostarUA, BastettoUA, AnneMoore and more – all accredited by WCF International.",
+		"description3": "Let us help you find your purrrrr-ty baby today!",
+		"note": "*Showroom by appointments only",
+		"workingHours": {
+			"first": {
+				"day": "Mon - Fri",
+				"time": "10 am to 5pm CT"
+			},
+			"second": {
+				"day": "Sat",
+				"time": "10 am to 4 pm CT"
+			},
+			"third": {
+				"day": "Sun",
+				"time": "10 am to 5pm CT"
+			}
+		},
+		"contactLinks": {}
 	}
 }

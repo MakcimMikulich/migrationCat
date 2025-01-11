@@ -9,41 +9,44 @@ import mail from "@/assets/Contact/mail.svg";
 import phone from "@/assets/Contact/phone.svg";
 import house from "@/assets/Contact/house.svg";
 import { Heading } from "@/ui";
-
-const workingHours = [
-	{
-		day: "Mon - Fri",
-		time: "10 am to 5pm CT",
-	},
-	{
-		day: "Sat",
-		time: "10 am to 4 pm CT",
-	},
-	{
-		day: "Sun",
-		time: "10 am to 5pm CT",
-	},
-];
-
-const contactLinks = [
-	{
-		img: phone,
-		link: "#",
-		content: "+375 (29) 67-33-984",
-	},
-	{
-		img: mail,
-		link: "#",
-		content: "24nika74@mail.ru",
-	},
-	{
-		img: map,
-		link: "#",
-		content: "220114, Belarus, Minsk, ST Uchenie",
-	},
-];
+import { useTranslations } from "next-intl";
 
 const Contact = () => {
+	const t = useTranslations("contact");
+
+	const workingHours = [
+		{
+			day: "Mon - Fri",
+			time: "10 am to 5pm CT",
+		},
+		{
+			day: "Sat",
+			time: "10 am to 4 pm CT",
+		},
+		{
+			day: "Sun",
+			time: "10 am to 5pm CT",
+		},
+	];
+
+	const contactLinks = [
+		{
+			img: phone,
+			link: "#",
+			content: "+375 (29) 67-33-984",
+		},
+		{
+			img: mail,
+			link: "#",
+			content: "24nika74@mail.ru",
+		},
+		{
+			img: map,
+			link: "#",
+			content: "220114, Belarus, Minsk, ST Uchenie",
+		},
+	];
+
 	return (
 		<div className={styles.contact}>
 			<Header />
@@ -55,22 +58,14 @@ const Contact = () => {
 					<div className={styles.content__info}>
 						<div className={styles.info__title}>
 							<Heading>
-								<span>Contact with Monito</span>
+								<span>{t("title")}</span>
 							</Heading>
 						</div>
 						<div className={styles.info__desc}>
-							<p>
-								Discover a lifetime of love and joy with your perfect furry
-								companion!
-							</p>
-							<p>
-								At MeoWoff, we specialize in matching families with the ideal
-								pet from the finest European catteries like AlbostarUA,
-								BastettoUA, AnneMoore and more – all accredited by WCF
-								International.
-							</p>
+							<p>{t("description1")}</p>
+							<p>{t("description2")}</p>
 
-							<p>Let us help you find your purrrrr-ty baby today!</p>
+							<p>{t("description3")}</p>
 						</div>
 						<div className={styles.info__contact}>
 							{contactLinks.map((el, i) => (
@@ -94,7 +89,7 @@ const Contact = () => {
 						</div>
 						<div className={styles.info__note}>
 							<img src={house.src} alt="icon" />
-							<span>*Showroom by appointments only</span>
+							<span>{t("note")}</span>
 						</div>
 					</div>
 					<div className={styles.content__map}>
