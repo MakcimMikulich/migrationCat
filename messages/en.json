@@ -1,73 +1,89 @@
 {
-    "common": {
-        "buttons": {
-            "Hello": "Hello"
-        }
-    },
-    "navLinks": {
-        "Home": "Home",
-        "Category": "Category",
-        "About": "About",
-        "Contact": "Contact"
-    },
+	"common": {
+		"buttons": {
+			"Hello": "Hello"
+		}
+	},
+	"navLinks": {
+		"Home": "Home",
+		"Category": "Category",
+		"About": "About",
+		"Contact": "Contact"
+	},
 
-    "footer": {
-        "copyright": "© 2025 Monito. All rights reserved.",
-        "terms": "Terms of Service",
-        "privacy": "Privacy Policy"
-    },
+	"footer": {
+		"copyright": "© 2025 Monito. All rights reserved.",
+		"terms": "Terms of Service",
+		"privacy": "Privacy Policy"
+	},
 
-    "home": {
-        "title": "One more friend",
-        "subTitle": "Thousands more fun!",
-        "description": "Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!",
-        "sections": {
-            "sectionOne": {
-                "title": "Take A look At Some Of Our Pets",
-                "note": "What new?",
-                "button": {
-                    "text": "View more",
-                    "link": "category"
-                }
-            },
-            "sectionTwo": {
-                "title": "Our Products",
-                "note": "Hard to choose right products for your pets?",
-                "button": {
-                    "text": "View more",
-                    "link": "category"
-                }
-            }
-        },
-        "buttonDefault": "Hello",
-        "buttonEmpty": "Hello"
-    },
+	"home": {
+		"title": "One more friend",
+		"subTitle": "Thousands more fun!",
+		"description": "Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!",
+		"sections": {
+			"sectionOne": {
+				"title": "Take A look At Some Of Our Pets",
+				"note": "What new?",
+				"button": {
+					"text": "View more",
+					"link": "category"
+				}
+			},
+			"sectionTwo": {
+				"title": "Our Products",
+				"note": "Hard to choose right products for your pets?",
+				"button": {
+					"text": "View more",
+					"link": "category"
+				}
+			}
+		},
+		"buttonDefault": "Hello",
+		"buttonEmpty": "Hello"
+	},
 
-    "contact": {
-        "title": "Contact with Monito",
-        "description1": "Discover a lifetime of love and joy with your perfect furry companion!",
-        "description2": "At MeoWoff, we specialize in matching families with the ideal pet from the finest European catteries like AlbostarUA, BastettoUA, AnneMoore and more – all accredited by WCF International.",
-        "description3": "Let us help you find your purrrrr-ty baby today!",
-        "note": "*Showroom by appointments only",
-        "workingHours": {
-            "first": {
-                "day": "Mon - Fri",
-                "time": "10 am to 5pm CT"
-            },
-            "second": {
-                "day": "Sat",
-                "time": "10 am to 4 pm CT"
-            },
-            "third": {
-                "day": "Sun",
-                "time": "10 am to 5pm CT"
-            }
-        }
-    },
+	"contact": {
+		"title": "Contact with Monito",
+		"description1": "Discover a lifetime of love and joy with your perfect furry companion!",
+		"description2": "At MeoWoff, we specialize in matching families with the ideal pet from the finest European catteries like AlbostarUA, BastettoUA, AnneMoore and more – all accredited by WCF International.",
+		"description3": "Let us help you find your purrrrr-ty baby today!",
+		"note": "*Showroom by appointments only",
+		"workingHours": {
+			"first": {
+				"day": "Mon - Fri",
+				"time": "10 am to 5pm CT"
+			},
+			"second": {
+				"day": "Sat",
+				"time": "10 am to 4 pm CT"
+			},
+			"third": {
+				"day": "Sun",
+				"time": "10 am to 5pm CT"
+			}
+		}
+	},
 
-    "about": {
-        "title": "About Our British",
-        "subtitle": "Shorthair Cattery",
-        "description": "Our cattery specializes in breeding and selling British Shorthair Chinchillas. We proudly offer high-quality kittens that are not only beautiful but also exceptionally healthy and friendly. Our dedicated team ensures that each kitten is raised in the best possible environment, fostering their growth and development. We strive to match each kitten with the perfect family, where they will be surrounded by love and care. Join our satisfied clients and find your fluffy friend at our cattery!"
-    }
+	"about": {
+		"title": "About Our British",
+		"subtitle": "Shorthair Cattery",
+		"description": "Our cattery specializes in breeding and selling British Shorthair Chinchillas. We proudly offer high-quality kittens that are not only beautiful but also exceptionally healthy and friendly. Our dedicated team ensures that each kitten is raised in the best possible environment, fostering their growth and development. We strive to match each kitten with the perfect family, where they will be surrounded by love and care. Join our satisfied clients and find your fluffy friend at our cattery!",
+		"buttonDefault": "Hello",
+		"buttonEmpty": "learn more",
+		"headings": {
+			"first": {
+				"title": "Our Story",
+				"note": "What is your way?"
+			},
+			"second": {
+				"title": "Lets see on map",
+				"note": "Where our pets?"
+			},
+			"third": {
+				"title": "We were ready for this",
+				"note": "Do you have any questions?"
+			}
+		}
+	}
 }
