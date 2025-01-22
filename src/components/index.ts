@@ -9,8 +9,11 @@ import { MultiFilter } from "./MultiFilter";
 import { ElfsightWidgetComponent } from "./ElfsightWidget";
 import { SwiperPagination } from "./SwiperPagination";
 import { WrapperFilter } from "./WrapperFilter";
+import { DogInfo } from "./DogInfo/DogInfo";
+import { SwiperDogs } from "./SwiperDogs/SwiperDogs";
 
 export {
+	SwiperDogs,
 	Header,
 	Footer,
 	WrapperFilter,
@@ -22,4 +25,5 @@ export {
 	MultiFilter,
 	ElfsightWidgetComponent,
 	SwiperPagination,
+	DogInfo,
 };

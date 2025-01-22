@@ -43,7 +43,7 @@ export const SwiperPagination = ({ slides }: SwiperPaginationProps) => {
 			>
 				{slides.map((slide, i) => (
 					<SwiperSlide key={i}>
-						<img src={slide} alt="customer" />
+						<img width={190} height={260} src={slide.src} alt="customer" />
 					</SwiperSlide>
 				))}
 			</Swiper>

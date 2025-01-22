@@ -1,6 +1,6 @@
-import { productInfoType } from "../../db/cardsProducts.data.ts";
+import { productInfoType } from "@/db/cardsProducts.data";
 import styles from "./cardInfo.module.scss";
-import { dogInfoType } from "../../db/cardsDogs.data.ts";
+import { dogInfoType } from "@/db/cardsDogs.data.js";
 
 interface CardInfoProps {
 	info: productInfoType | dogInfoType;

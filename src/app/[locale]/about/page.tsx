@@ -12,17 +12,7 @@ import { Button } from "@/ui";
 import img from "@/assets/Dog/CustomersSlider.png";
 import { useTranslations } from "next-intl";
 
-const slides = [
-	img.src,
-	img.src,
-	img.src,
-	img.src,
-	img.src,
-	img.src,
-	img.src,
-	img.src,
-	img.src,
-];
+const slides = [img, img, img, img, img, img, img, img, img];
 
 type TranslationFunction = (key: string) => string;
 

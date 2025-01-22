@@ -21,7 +21,7 @@ export interface aboutDog {
 export const ourDogs: ICard[] = [
 	{
 		image: dog1,
-		title: "name",
+		title: "name name",
 		cardInfo: { Gene: "Female", Age: "02 months" },
 		price: "3.900.000 VND",
 		dogInfo: [

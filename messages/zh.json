@@ -1,4 +1,89 @@
 {
-	"welcome": "欢迎来到我们的网站",
-	"description": "这是一个可以找到惊人宠物的平台。"
+	"common": {
+		"buttons": {
+			"Hello": "你好"
+		}
+	},
+	"navLinks": {
+		"Home": "首页",
+		"Category": "分类",
+		"About": "关于我们",
+		"Contact": "联系我们"
+	},
+
+	"footer": {
+		"copyright": "© 2025 Monito. 版权所有。",
+		"terms": "服务条款",
+		"privacy": "隐私政策"
+	},
+
+	"home": {
+		"title": "又多了一个朋友",
+		"subTitle": "更多的乐趣！",
+		"description": "拥有一只宠物意味着你会拥有更多的快乐，一个新朋友，一个总是陪伴你的开心伴侣。我们拥有超过200种不同的宠物，总有一只能满足你的需求！",
+		"sections": {
+			"sectionOne": {
+				"title": "看看我们的一些宠物",
+				"note": "有什么新鲜事？",
+				"button": {
+					"text": "查看更多",
+					"link": "category"
+				}
+			},
+			"sectionTwo": {
+				"title": "我们的产品",
+				"note": "很难为你的宠物选择合适的产品吗？",
+				"button": {
+					"text": "查看更多",
+					"link": "category"
+				}
+			}
+		},
+		"buttonDefault": "你好",
+		"buttonEmpty": "了解更多"
+	},
+
+	"contact": {
+		"title": "联系我们 Monito",
+		"description1": "与完美的毛茸茸伙伴一起发现充满爱与欢乐的生活！",
+		"description2": "在 MeoWoff，我们专注于从欧洲最好的猫舍中为家庭匹配理想的宠物，例如 AlbostarUA、BastettoUA、AnneMoore 等 - 所有这些都获得了 WCF 国际认证。",
+		"description3": "让我们今天帮助你找到你的小毛球吧！",
+		"note": "*仅限预约参观展厅",
+		"workingHours": {
+			"first": {
+				"day": "周一至周五",
+				"time": "上午10点到下午5点"
+			},
+			"second": {
+				"day": "周六",
+				"time": "上午10点到下午4点"
+			},
+			"third": {
+				"day": "周日",
+				"time": "上午10点到下午5点"
+			}
+		}
+	},
+
+	"about": {
+		"title": "关于我们的英国短毛猫",
+		"subtitle": "短毛猫舍",
+		"description": "我们的猫舍专注于繁育和销售英国短毛银渐层猫。我们自豪地提供高质量的猫咪，它们不仅美丽，而且健康、友好。我们的团队致力于为每只猫咪提供最佳的成长环境，促进它们的成长和发展。我们努力为每只猫咪找到最适合的家庭，让它们被爱和关怀包围。加入我们的满意客户行列，在我们的猫舍找到你的毛茸茸的朋友！",
+		"buttonDefault": "你好",
+		"buttonEmpty": "了解更多",
+		"headings": {
+			"first": {
+				"title": "我们的故事",
+				"note": "你的方式是什么？"
+			},
+			"second": {
+				"title": "让我们看看地图",
+				"note": "我们的宠物在哪里？"
+			},
+			"third": {
+				"title": "我们已经准备好了",
+				"note": "你有任何问题吗？"
+			}
+		}
+	}
 }
